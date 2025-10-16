@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BrightScript Debug: Launch",
+            "type": "brightscript",
+            "request": "launch",
+            "host": "192.168.0.39",
+            "password": "1234",
+            "rootDir": "${workspaceFolder}",
+        }
+    ]
+}

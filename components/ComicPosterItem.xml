@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ComicPosterItem" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="OnContentSet" />
+  </interface>
+  
+  <script type="text/brightscript" uri="ComicPosterItem.brs" />
+  
+  <children>
+    <Poster
+      id="poster"
+      loadDisplayMode="scaleToFit"
+      width="160"
+      height="240"
+      translation="[10, 10]"
+      loadWidth="160"
+      loadHeight="240" />
+    
+    <Label
+      id="titleLabel"
+      width="180"
+      height="30"
+      translation="[0, 260]"
+      horizAlign="center"
+      vertAlign="center"
+      font="font:TinySystemFont"
+      color="0xFFFFFF" />
+  </children>
+</component>

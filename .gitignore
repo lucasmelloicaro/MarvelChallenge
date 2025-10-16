@@ -1,0 +1,15 @@
+out/roku-deploy.zip
+out/.roku-deploy-staging/source/Main.brs
+out/.roku-deploy-staging/manifest
+out/.roku-deploy-staging/images/splash-screen_sd.jpg
+out/.roku-deploy-staging/images/splash-screen_hd.jpg
+out/.roku-deploy-staging/images/splash-screen_fhd.jpg
+out/.roku-deploy-staging/images/channel-poster_sd.png
+out/.roku-deploy-staging/images/channel-poster_hd.png
+out/.roku-deploy-staging/images/channel-poster_fhd.png
+out/.roku-deploy-staging/components/MarvelComicsScene.xml
+out/.roku-deploy-staging/components/MarvelComicsScene.brs
+out/.roku-deploy-staging/components/MarvelApiTask.xml
+out/.roku-deploy-staging/components/MarvelApiTask.brs
+out/.roku-deploy-staging/components/ComicPosterItem.xml
+out/.roku-deploy-staging/components/ComicPosterItem.brs

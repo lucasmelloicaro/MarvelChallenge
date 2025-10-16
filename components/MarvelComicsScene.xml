@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MarvelComicsScene" extends="Scene"> 
+	<children>
+      <Label id="loadingLabel" 
+      	text="Loading Marvel Comics..."
+      	width="1200" 
+      	height="100" 
+      	translation="[60, 60]"
+      	horizAlign="left"
+      	vertAlign="top"
+      	font="font:LargeBoldSystemFont"
+      	color="0xFFFFFF" />
+      
+      <!-- Focused Comic Details Section -->
+      <Group id="comicDetailsGroup" visible="false" translation="[50, 0]">
+        <!-- Left side - Metadata -->
+        <Group id="metadataGroup" translation="[0, 0]">
+          <Label id="comicTitle"
+            width="800"
+            height="60"
+            translation="[0, 40]"
+            font="font:LargeBoldSystemFont"
+            color="0xFFFFFFFF"
+            horizAlign="left"
+            vertAlign="top"
+            wrap="true" />
+            
+          <Label id="comicDescription"
+            width="800"
+            height="180"
+            translation="[0, 120]"
+            font="font:MediumSystemFont"
+            color="0xCCCCCCFF"
+            horizAlign="left"
+            vertAlign="top"
+            wrap="true" />
+        </Group>
+        
+        <!-- Right side - Large Image -->
+        <Poster id="focusedComicImage"
+          width="210"
+          height="315"
+          translation="[950, 30]"
+          loadDisplayMode="scaleToFit"
+          visible="false" />
+      </Group>
+      	
+      <RowList
+        id="comicsGrid"
+        itemComponentName="ComicPosterItem"
+        translation="[50, 380]"
+        numRows="1"
+        rowitemSize="[[180, 310]]"
+        rowItemSpacing="[[30,0]]"
+        itemSize="[2000,350]"
+        showRowLabel="[false]"
+        rowFocusAnimationStyle="fixedFocus"
+        focusable="true"
+        visible="false" />
+    </children>
+    <script type="text/brightscript" uri="MarvelComicsScene.brs" />
+    
+    <interface>
+      <field id="comicsData" type="node" />
+
+    </interface>
+</component>
