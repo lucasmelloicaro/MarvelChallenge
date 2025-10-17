@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="CharacterDetailsScene" extends="Group"> 
+    <children>
+        <!-- Background -->
+        <Rectangle
+            width="1920"
+            height="1080"
+            color="0x000000" />
+            
+        <!-- Focusable group for key handling -->
+        <Group id="keyHandler" focusable="true" />
+            
+        <!-- Header with Comic Title -->
+        <Label id="comicTitleHeader" 
+            text="Comic Characters"
+            width="1200" 
+            height="60" 
+            translation="[60, 40]"
+            horizAlign="left"
+            vertAlign="center"
+            font="font:LargeBoldSystemFont"
+            color="0xFFFFFF" />
+            
+        <!-- Loading Label -->
+        <Label id="loadingLabel" 
+            text="Loading Characters..."
+            width="1200" 
+            height="50" 
+            translation="[60, 120]"
+            horizAlign="left"
+            vertAlign="center"
+            font="font:MediumSystemFont"
+            color="0x72D7EEFF" />
+            
+        <!-- Characters List -->
+        <RowList
+            id="charactersList"
+            itemComponentName="CharacterListItem"
+            translation="[60, 180]"
+            numRows="10"
+            rowitemSize="[[1200, 120]]"
+            rowItemSpacing="[[0, 5]]"
+            itemSize="[1200, 150]"
+            showRowLabel="[false]"
+            rowFocusAnimationStyle="floatingFocus"
+            focusable="true"
+            visible="false" />
+            
+        <!-- No Characters Message -->
+        <Label id="noCharactersLabel" 
+            text="No characters found for this comic."
+            width="1200" 
+            height="100" 
+            translation="[60, 300]"
+            horizAlign="center"
+            vertAlign="center"
+            font="font:MediumSystemFont"
+            color="0xCCCCCCFF"
+            visible="false" />            
+
+    </children>
+    
+    <script type="text/brightscript" uri="CharacterDetailsScene.brs" />
+    
+    <interface>
+        <field id="navigateToComics" type="boolean" />
+        <field id="comicData" type="assocarray" />
+    </interface>
+</component>

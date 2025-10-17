@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="VideoPlayerScene" extends="Group"> 
+    <children>
+        <!-- Background -->
+        <Rectangle
+            width="1920"
+            height="1080"
+            color="0x000000" />
+            
+        <!-- Video Player -->
+        <Video
+            id="videoPlayer"
+            width="1920"
+            height="1080"
+            translation="[0, 0]"
+            focusable="true" />
+            
+        <!-- Character Info Overlay -->
+        <Rectangle
+            id="infoBackground"
+            width="1920"
+            height="150"
+            translation="[0, 0]"
+            color="0x000000AA"
+            visible="true" />
+            
+        <Label id="characterNameLabel" 
+            text="Character Video"
+            width="1200" 
+            height="60" 
+            translation="[60, 30]"
+            horizAlign="left"
+            vertAlign="center"
+            font="font:LargeBoldSystemFont"
+            color="0xFFFFFF" />
+            
+        <Label id="videoInfoLabel" 
+            text="Press BACK to return to characters"
+            width="1200" 
+            height="40" 
+            translation="[60, 80]"
+            horizAlign="left"
+            vertAlign="center"
+            font="font:MediumSystemFont"
+            color="0xCCCCCCFF" />
+    </children>
+    
+    <script type="text/brightscript" uri="VideoPlayerScene.brs" />
+    
+    <interface>
+        <field id="characterData" type="assocarray" />
+        <field id="navigateToCharacters" type="boolean" />
+    </interface>
+</component>

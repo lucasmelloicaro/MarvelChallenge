@@ -13,3 +13,9 @@ out/.roku-deploy-staging/components/MarvelApiTask.xml
 out/.roku-deploy-staging/components/MarvelApiTask.brs
 out/.roku-deploy-staging/components/ComicPosterItem.xml
 out/.roku-deploy-staging/components/ComicPosterItem.brs
+out/.roku-deploy-staging/components/CharacterDetailsScene.brs
+out/.roku-deploy-staging/components/CharacterDetailsScene.xml
+out/.roku-deploy-staging/components/CharacterListItem.brs
+out/.roku-deploy-staging/components/CharacterListItem.xml
+out/.roku-deploy-staging/components/VideoPlayerScene.brs
+out/.roku-deploy-staging/components/VideoPlayerScene.xml

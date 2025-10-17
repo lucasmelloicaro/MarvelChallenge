@@ -4,21 +4,32 @@ A Roku application that fetches and displays Marvel Comics data using the Marvel
 
 ## Features
 - Connects to Marvel Comics API to fetch recent comics
-- Displays comic titles, page counts, release dates, and prices
-- Comprehensive logging and error handling
-- Detailed debug output to console
-- Responsive text display with proper component organization
+- Displays comic titles, descriptions, and cover images
+- Navigate to character details by selecting any comic
+- Fetches and displays characters associated with each comic
+- Select any character to play a sample video using Roku's native video player
+- Full video playback controls with play/pause and back navigation
+- Responsive navigation between comics, characters, and video player
+- Clean UI with proper focus management and visual feedback
 
 ## Project Structure
 ```
-RokuAmdocs/
+MarvelChallenge/
 ├── .vscode/
 │   └── launch.json              # VS Code debug configuration
 ├── components/
 │   ├── MarvelApiTask.xml        # Marvel API Task component definition
 │   ├── MarvelApiTask.brs        # Marvel API network request logic
-│   ├── MarvelComicsScene.xml    # Main scene component UI
-│   └── MarvelComicsScene.brs    # Main scene logic and data handling
+│   ├── MarvelComicsScene.xml    # Main comics scene component UI
+│   ├── MarvelComicsScene.brs    # Main comics scene logic and data handling
+│   ├── CharacterDetailsScene.xml # Character details scene UI
+│   ├── CharacterDetailsScene.brs # Character details logic and API calls
+│   ├── ComicPosterItem.xml      # Individual comic poster component
+│   ├── ComicPosterItem.brs      # Comic poster display logic
+│   ├── CharacterListItem.xml    # Individual character list item
+│   ├── CharacterListItem.brs    # Character item display logic
+│   ├── VideoPlayerScene.xml     # Video player scene UI
+│   └── VideoPlayerScene.brs     # Video player logic and controls
 ├── source/
 │   └── main.brs                 # App entry point
 ├── images/                      # App icons and splash screens
@@ -57,8 +68,13 @@ This app uses the Marvel Comics API to fetch and display recent comic book data:
 5. Check the debug console in VS Code for detailed API response information
 
 ### What You'll See
-- **On Screen**: List of recent Marvel comics with titles, page counts, and release dates
-- **In Debug Console**: Detailed information including comic descriptions, creators, prices, and full API responses
+- **Main Screen**: Horizontal scrollable list of recent Marvel comics with cover images and titles
+- **Comic Details**: When focusing on a comic, see title and description in the top section
+- **Character Navigation**: Select any comic (press OK/Enter) to view associated characters
+- **Character Details**: Vertical scrollable list showing character thumbnails, names, and descriptions
+- **Video Player**: Select any character (press OK/Enter) to play a sample video
+- **Video Controls**: Use OK to play/pause, directional keys to show info, BACK to return
+- **Navigation**: Use BACK button to navigate: Video → Characters → Comics
 
 
 ## api call: https://gateway.marvel.com/v1/public/comics?ts=1760645413&apikey=b63e4263edd3da6685fa48d540bee87a&hash=759cab1787e2901d76ee91825e6d5a92&limit=10&format=comic&formatType=comic&orderBy=-onsaleDate&dateDescriptor=lastWeek&hasDigitalIssue=true
@@ -84,8 +100,9 @@ This app uses the Marvel Comics API to fetch and display recent comic book data:
 
 ## Next Steps
 - Add pagination for browsing more comics
-- Implement character and series endpoints
-- Add comic cover image display
-- Create navigation between different Marvel API endpoints
-- Add filtering and search capabilities
-- Implement local caching of API responses
+- Implement series and events endpoints  
+- Add character detail pages with more information
+- Create search and filtering capabilities
+- Add local caching of API responses
+- Implement favorites/bookmarks functionality
+- Add loading animations and better visual feedback

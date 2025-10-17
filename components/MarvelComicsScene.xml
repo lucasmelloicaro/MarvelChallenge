@@ -14,7 +14,6 @@
       <!-- Focused Comic Details Section -->
       <Group id="comicDetailsGroup" visible="false" translation="[50, 0]">
         <!-- Left side - Metadata -->
-        <Group id="metadataGroup" translation="[0, 0]">
           <Label id="comicTitle"
             width="800"
             height="60"
@@ -34,7 +33,6 @@
             horizAlign="left"
             vertAlign="top"
             wrap="true" />
-        </Group>
         
         <!-- Right side - Large Image -->
         <Poster id="focusedComicImage"
@@ -59,9 +57,4 @@
         visible="false" />
     </children>
     <script type="text/brightscript" uri="MarvelComicsScene.brs" />
-    
-    <interface>
-      <field id="comicsData" type="node" />
-
-    </interface>
 </component>
